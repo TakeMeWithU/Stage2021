@@ -5,6 +5,7 @@
     - [DOCKER](#docker)
     - [YARN](#yarn)
 
+
 ## How to run locally #
 
 - type `docker network create hdmnetwork`
@@ -19,3 +20,5 @@ For some reason, on Windows you might need to use `192.168.99.100 hdmnetwork.com
 ``` 
 docker-compose exec php-fpm php backend/bin/console
 ```
+
+## Installation #
