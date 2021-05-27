@@ -8,6 +8,9 @@
 - [3 Setup project](#3-setup-project)
   - [3-1 HDM-Network-Docker](#3-1-hdm-network-docker)
   - [3-2 Website](#3-2-website)
+  - [3-3 Ui-Dashboard](3-3-ui-dashboard)
+- [4 How to run locally](#4-how-to-run-locally)
+- [5 How to run symfony console](#5-how-to-run-symfony-console)
 
 ## 1 Installation
   - This guide is only available for Linux.
@@ -30,14 +33,14 @@
 - Please pay attention to the following:
 
 ### 3-1 HDM-Network-Docker
-- Create file .env in duplicate with .env.examples or juste rename .env.examples to .env
+- Create file .env with/or duplicate with .env.examples or juste rename .env.examples to .env
 - Change path to your folder Website in file .env:
 
 ```
 PROJECT_WEBSITE_PATH=/home/{path}
 ```
 
-- Delete 3 lines in /nginx/default.conf:
+- Delete the 3 lines in /nginx/default.conf to run locally:
 ```
 if ( $host !~ ^www\. ) {
   return 301 $scheme://www.$host$request_uri;
@@ -45,19 +48,23 @@ if ( $host !~ ^www\. ) {
 ```
 
 ### 3-2 Website
-- Create file .env in duplicate with .env.test or juste rename .env.test to .env
+- Create file .env with/or duplicate with .env.test or juste rename .env.test to .env
 
-## How to run locally
+### 3-3 Ui-Dashboard
+- Create file .env.js in public/ with/or duplicate with .env.example.js or juste rename .env.example.js to .env.js
 
+## 4 How to run locally
+
+- type `cd hdmnetwork-docker/`
 - type `docker network create hdmnetwork`
-- In hdm-network-website/ type `docker-compose up -d --build`
-- Add hdmnetwork.com to your local hosts `127.0.0.1 hdmnetwork.com`, in the case you do not use Windows for Docker, you might to add the host that way `192.168.99.100 hdmnetwork.com`
-- Go to http://hdmnetwork.com and enjoy! (or `localhost:[Port of Nginx] Port of Nginx == (docker ps) port->80`)
+- type `docker volume create database-hdmnetwork`
+- type `docker-compose up -d --build`
 
-For some reason, on Windows you might need to use `192.168.99.100 hdmnetwork.com` instead of `127.0.0.1`
+- type `docker ps` to get port
+- Go to `localhost:[Port of Nginx] Port of Nginx == (docker ps) port->80` and enjoy!
 
 ----
-## How to run symfony console
+## 5 How to run symfony console
 ``` 
 docker-compose exec php-fpm php backend/bin/console
 ```
