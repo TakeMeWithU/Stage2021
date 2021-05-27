@@ -67,7 +67,8 @@ if ( $host !~ ^www\. ) {
 - type `docker volume create database-hdmnetwork`
 - type `docker-compose up -d --build`
 
-- type `docker ps` to get port of nginx! You need to have 3 deployed containers. Example :
+- type `docker ps` to get port of nginx! You need to have 3 deployed containers. If you don't have 3 deployed containers, please wait few seconds or retype `docker-compose up -d --build`.
+- Example :
 ```
 CONTAINER ID   IMAGE                           COMMAND                  CREATED             STATUS             PORTS                                         NAMES
 3b8f651de4cb   hdmnetwork_php-fpm-hdmnetwork   "docker-php-entrypoi…"   About an hour ago   Up About an hour   0.0.0.0:49159->9000/tcp, :::49159->9000/tcp   php-fpm-hdmnetwork
@@ -79,6 +80,27 @@ b3e25668d1e9   hdmnetwork_nginx-hdmnetwork     "/docker-entrypoint.…"   About 
 
 
 ### 4-2 Ui-Dashboard
+- type `cd ui-dashboard` or move to folder ui-dashboard/
+
+- Change settings: 
+```
+(function () {
+  window.hdm_env = window.hdm_env || {};
+  window.hdm_env.REACT_APP_API_URL = 'http://hdmnetwork.com';
+  window.hdm_env.REACT_APP_MEDIA_URL = 'http://hdmnetwork.com/media/';
+  window.hdm_env.REACT_APP_MEDIA_URL_JOBS = 'http://hdmnetwork.com/assets/images/jobs/'; 
+})();
+```
+
+- In the case, we have 49160 like port of nginx:
+```
+(function () {
+  window.hdm_env = window.hdm_env || {};
+  window.hdm_env.REACT_APP_API_URL = "http://localhost:49160/";
+  window.hdm_env.REACT_APP_MEDIA_URL = "http://localhost:49160/media/";
+  window.hdm_env.REACT_APP_MEDIA_URL_JOBS = 'http://localhost:49160/assets/images/jobs/'; 
+})();
+```
 
 ----
 ## 5 How to run symfony console
