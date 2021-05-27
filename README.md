@@ -2,8 +2,8 @@
 
 ## Table of content
 - [1 Installation](#1-installation)
-  - [1.1 DOCKER](#docker)
-  - [1.2 YARN](#1.2-yarn)
+  - [1.1 DOCKER](#1-1-docker)
+  - [1.2 YARN](#1-2-yarn)
 - [Download Resources](#download-resources)
 - [Setup project](#setup-project)
   - [HDM-Network-Docker](#hdm-network-docker)
