@@ -82,7 +82,7 @@ b3e25668d1e9   hdmnetwork_nginx-hdmnetwork     "/docker-entrypoint.…"   About 
 ### 4-2 Ui-Dashboard
 - type `cd ui-dashboard` or move to folder ui-dashboard/
 
-- Change settings: 
+- Change settings in file .env.js: 
 ```
 (function () {
   window.hdm_env = window.hdm_env || {};
@@ -102,8 +102,17 @@ b3e25668d1e9   hdmnetwork_nginx-hdmnetwork     "/docker-entrypoint.…"   About 
 })();
 ```
 
+- type `yarn install`
+- type `yarn start`
+- For another commands, you can read file README.md in folder ui-dashboard.
+
 ----
 ## 5 How to run symfony console
 ``` 
-docker-compose exec php-fpm php backend/bin/console
+docker exec -it php-fpm-hdmnetwork [commands]
+```
+
+- Example:
+``` 
+docker exec -it php-fpm-hdmnetwork php bin/console 
 ```
