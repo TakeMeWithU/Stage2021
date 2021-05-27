@@ -2,11 +2,11 @@
 
 ## Table of content
 - [1 Installation](#1-installation)
-  - [1.1 DOCKER](#1-1-docker)
-  - [1.2 YARN](#1-2-yarn)
-- [Download Resources](#download-resources)
-- [Setup project](#setup-project)
-  - [HDM-Network-Docker](#hdm-network-docker)
+  - [1-1 DOCKER](#1-1-docker)
+  - [1-2 YARN](#1-2-yarn)
+- [2 Download Resources](#2-download-resources)
+- [3 Setup project](#3-setup-project)
+  - [3-1 HDM-Network-Docker](#3-1-hdm-network-docker)
 
 ## 1 Installation
   - This guide is only available for Linux.
@@ -18,17 +18,17 @@
   - Before you start using Yarn, you'll first need to install it on your system. There are many different ways to install Yarn, but a single one is recommended and cross-platform: 
   - Install via npm. Please follow this [guide](https://classic.yarnpkg.com/en/docs/install/#debian-stable).
 
-## Download Resources
+## 2 Download Resources
   - Before you start setting up this project, you'll need to download 3 foldes:
     - [HDM-Network-docker](https://github.com/hdm-infra/hdmnetwork-docker).
     - [Website-Frontend](https://github.com/hdmnetwork/website).
     - [Ui-Dashboard-Backend](https://github.com/hdmnetwork/ui-dashboard)
       - *Please contact your leader to all permissions.
 
-## Setup project
+## 3 Setup project
 - Please pay attention to the following:
 
-### HDM-Network-Docker
+### 3-1 HDM-Network-Docker
 - Create file .env in duplicate with .env.examples or juste rename .env.examples to .env
 - Change path to your folder Website in file .env:
 
