@@ -60,7 +60,13 @@ if ( $host !~ ^www\. ) {
 - type `docker volume create database-hdmnetwork`
 - type `docker-compose up -d --build`
 
-- type `docker ps` to get port
+- type `docker ps` to get port ! You need to have 3 deployed containers. Example :
+```
+CONTAINER ID   IMAGE                           COMMAND                  CREATED             STATUS             PORTS                                         NAMES
+3b8f651de4cb   hdmnetwork_php-fpm-hdmnetwork   "docker-php-entrypoi…"   About an hour ago   Up About an hour   0.0.0.0:49159->9000/tcp, :::49159->9000/tcp   php-fpm-hdmnetwork
+b3e25668d1e9   hdmnetwork_nginx-hdmnetwork     "/docker-entrypoint.…"   About an hour ago   Up About an hour   0.0.0.0:49160->80/tcp, :::49160->80/tcp       nginx-hdmnetwork
+9bf44e0d5709   mysql:5.7.18                    "docker-entrypoint.s…"   About an hour ago   Up About an hour   0.0.0.0:49157->3306/tcp, :::49157->3306/tcp   database-hdmnetwork
+```
 - Go to `localhost:[Port of Nginx] Port of Nginx == (docker ps) port->80` and enjoy!
 
 ----
