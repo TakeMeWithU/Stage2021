@@ -7,6 +7,7 @@
 - [2 Download Resources](#2-download-resources)
 - [3 Setup project](#3-setup-project)
   - [3-1 HDM-Network-Docker](#3-1-hdm-network-docker)
+  - [3-2 Website](#3-2-website)
 
 ## 1 Installation
   - This guide is only available for Linux.
@@ -35,6 +36,16 @@
 ```
 PROJECT_WEBSITE_PATH=/home/{path}
 ```
+
+- Delete 3 lines in /nginx/default.conf:
+```
+if ( $host !~ ^www\. ) {
+  return 301 $scheme://www.$host$request_uri;
+}
+```
+
+### 3-2 Website
+- Create file .env in duplicate with .env.test or juste rename .env.test to .env
 
 ## How to run locally
 
