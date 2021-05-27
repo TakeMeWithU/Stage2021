@@ -1,17 +1,17 @@
 # HDM Network Website 
 
 ## Table of content
-- [Installation](#installation)
-  - [DOCKER](#docker)
+- [1-Installation](#installation)
+  - [1.1-DOCKER](#docker)
   - [YARN](#yarn)
 - [Download Resources](#download-resources)
 - [Setup project](#setup-project)
   - [HDM-Network-Docker](#hdm-network-docker)
 
-## Installation
+## 1-Installation
   - This guide is only available for Linux.
 
-  ### Docker
+  ### 1.1-Docker
   - Install Docker Engine on Ubuntu. Please read and follow this [page](https://docs.docker.com/engine/install/ubuntu/) for install Docker.
 
   ### Yarn
