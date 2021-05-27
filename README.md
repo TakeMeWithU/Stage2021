@@ -5,6 +5,11 @@
     - [DOCKER](#docker)
     - [YARN](#yarn)
 
+## Installation 
+  - This guide is only available for Linux.
+
+  ### Docker
+    - Please read and follow this [page](https://docs.docker.com/engine/install/ubuntu/) for install Docker.
 
 ## How to run locally #
 
@@ -21,4 +26,3 @@ For some reason, on Windows you might need to use `192.168.99.100 hdmnetwork.com
 docker-compose exec php-fpm php backend/bin/console
 ```
 
-## Installation #
