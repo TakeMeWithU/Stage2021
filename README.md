@@ -11,10 +11,10 @@
 ## 1 Installation
   - This guide is only available for Linux.
 
-  ### 1.1 Docker
+  ### 1-1 Docker
   - Install Docker Engine on Ubuntu. Please read and follow this [page](https://docs.docker.com/engine/install/ubuntu/) for install Docker.
 
-  ### 1.2 Yarn
+  ### 1-2 Yarn
   - Before you start using Yarn, you'll first need to install it on your system. There are many different ways to install Yarn, but a single one is recommended and cross-platform: 
   - Install via npm. Please follow this [guide](https://classic.yarnpkg.com/en/docs/install/#debian-stable).
 
