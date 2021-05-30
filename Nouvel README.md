@@ -13,6 +13,7 @@
   - [4-1 Website](#4-1-website)
   - [4-2 Ui-Dashboard](#4-2-ui-dashboard)
 - [5 How to run symfony console](#5-how-to-run-symfony-console)
+- [6 Issues](#6-issues)
 
 ## 1 Installation
   - This guide is only available for Linux.
@@ -26,7 +27,7 @@
 
 ----
 ## 2 Download Resources
-  - Before you start setting up this project, you'll need to download 3 foldes:
+  - Before you start setting up this project, you'll need to download 3 folders:
     - [HDM-Network-docker](https://github.com/hdm-infra/hdmnetwork-docker).
     - [Website-Frontend](https://github.com/hdmnetwork/website).
     - [Ui-Dashboard-Backend](https://github.com/hdmnetwork/ui-dashboard)
@@ -76,6 +77,12 @@ b3e25668d1e9   hdmnetwork_nginx-hdmnetwork     "/docker-entrypoint.…"   About 
 9bf44e0d5709   mysql:5.7.18                    "docker-entrypoint.s…"   About an hour ago   Up About an hour   0.0.0.0:49157->3306/tcp, :::49157->3306/tcp   database-hdmnetwork
 ```
 - In this case, we have 49160 like port of Nginx.
+
+- Don't forget to fixtures your BDD with this commands:
+```
+docker exec -it php-fpm-hdmnetwork php bin/console doctrine:fixtures:load
+```
+
 - Go to `localhost:[Port of Nginx] Port of Nginx == (docker ps) port->80` and enjoy!
 
 
@@ -116,3 +123,10 @@ docker exec -it php-fpm-hdmnetwork [commands]
 ``` 
 docker exec -it php-fpm-hdmnetwork php bin/console 
 ```
+
+## 6 Issues
+ -  Please check closed issues before asking in IT channel.
+ -  [Website](https://github.com/hdmnetwork/website/issues)
+ -  [Ui-Dasboard](https://github.com/hdmnetwork/ui-dashboard/issues)
+  
+ - If you cannot find the solution for your problem. Please ask your team and create a new issue with/without solution.
